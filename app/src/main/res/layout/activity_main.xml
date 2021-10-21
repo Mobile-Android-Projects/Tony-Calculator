@@ -14,9 +14,9 @@
         android:layout_weight="0.45"
         android:background="@color/textViewBackground"
         android:gravity="bottom|end"
-        android:text="Hello World!"
+        android:text="000"
         android:textAlignment="viewEnd"
-        android:textDirection="rtl"
+        android:maxLength="12"
         android:textSize="40sp"
         android:textStyle="bold" />
 
@@ -45,7 +45,8 @@
                 android:backgroundTint="@color/lightGrey"
                 android:text="7"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:onClick="onDigit"/>
 
             <Button
                 android:id="@+id/numEightBtn"
@@ -57,7 +58,8 @@
                 android:backgroundTint="@color/lightGrey"
                 android:text="8"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:onClick="onDigit"/>
 
             <Button
                 android:id="@+id/numNineBtn"
@@ -69,7 +71,8 @@
                 android:backgroundTint="@color/lightGrey"
                 android:text="9"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:onClick="onDigit"/>
 
             <Button
                 android:id="@+id/divideBtn"
@@ -81,7 +84,8 @@
                 android:backgroundTint="@color/lightGrey"
                 android:text="/"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:onClick="onDivide"/>
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -105,7 +109,8 @@
                 android:backgroundTint="@color/lightGrey"
                 android:text="4"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:onClick="onDigit"/>
 
             <Button
                 android:id="@+id/numFiveBtn"
@@ -117,7 +122,8 @@
                 android:backgroundTint="@color/lightGrey"
                 android:text="5"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:onClick="onDigit"/>
 
             <Button
                 android:id="@+id/numSixBtn"
@@ -129,7 +135,8 @@
                 android:backgroundTint="@color/lightGrey"
                 android:text="6"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:onClick="onDigit"/>
 
             <Button
                 android:id="@+id/multiplyBtn"
@@ -141,7 +148,8 @@
                 android:backgroundTint="@color/lightGrey"
                 android:text="*"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:onClick="onMultiply"/>
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -162,7 +170,8 @@
                 android:backgroundTint="@color/lightGrey"
                 android:text="1"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:onClick="onDigit"/>
 
             <Button
                 android:id="@+id/numTwoBtn"
@@ -174,7 +183,8 @@
                 android:backgroundTint="@color/lightGrey"
                 android:text="2"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:onClick="onDigit"/>
 
             <Button
                 android:id="@+id/numThreeBtn"
@@ -186,7 +196,8 @@
                 android:backgroundTint="@color/lightGrey"
                 android:text="3"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:onClick="onDigit"/>
 
             <Button
                 android:id="@+id/minusBtn"
@@ -198,7 +209,8 @@
                 android:backgroundTint="@color/lightGrey"
                 android:text="-"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:onClick="onMinus"/>
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -210,16 +222,29 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/numDecimal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="0.25"
+                android:backgroundTint="@color/lightGrey"
+                android:text="."
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:onClick="onDecimal"/>
+            <Button
                 android:id="@+id/numZeroBtn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_weight="0.55"
+                android:layout_weight="0.25"
                 android:backgroundTint="@color/lightGrey"
                 android:text="0"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:onClick="onDigit"/>
 
             <Button
                 android:id="@+id/clearBtn"
@@ -231,7 +256,8 @@
                 android:backgroundTint="@color/lightGrey"
                 android:text="CLR"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:onClick="onClear"/>
 
             <Button
                 android:id="@+id/addBtn"
@@ -243,7 +269,8 @@
                 android:backgroundTint="@color/lightGrey"
                 android:text="+"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:onClick="onAdd"/>
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -264,7 +291,8 @@
                 android:backgroundTint="@color/lightGrey"
                 android:text="="
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:onClick="onEquals"/>
         </androidx.appcompat.widget.LinearLayoutCompat>
 
 
